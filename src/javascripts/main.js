@@ -2,13 +2,10 @@
 // import checkLoginStatus from './helpers/auth';
 
 import '../styles/main.scss';
+import createProjectCards from './components/createProjectCards';
+import projects from './helpers/data/projectsData';
 
 const init = () => {
-  document.querySelector('#app').innerHTML = '<h1>HELLO! You are up and running!</h1>';
-  console.warn('YOU ARE UP AND RUNNING!');
-
-  // USE WITH FIREBASE AUTH
-  // checkLoginStatus();
+  createProjectCards(projects);
 };
-
 init();
