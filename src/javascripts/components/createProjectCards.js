@@ -3,25 +3,26 @@ import printToDom from '../helpers/printToDom';
 const createProjectCards = (array) => {
   let domString = '';
   array.forEach((element, i) => {
-    domString += `<div class="card p-3" style="width: 35rem;" id=${i}>
-    <div class="modal fade" id="modal${i}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    domString += `<div class="modal" id="modal${i}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title fs-1" id="exampleModalLabel">Technologies Used</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <h5 class="modal-title w-100" id="exampleModalLabel">Technologies Used</h5>
         </div>
-        <div class="modal-body fs-3">
+        <div class="modal-body fs-5">
+          <div class="tech-used" id="modalTechUsed">
            ${element.technologiesUsed}
+          </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">X</button>
         </div>
       </div>
     </div>
   </div>
-  <h5 class="card-title fs-2 text-center mb-4">${element.title}</h5>
-                    <img src=${element.screenshot} class="card-img-top" alt="screenshot of a webpage">
+    <div class="card p-3" style="width: 50rem;" id=${i}>
+  <h5 class="card-title fs-3 text-center mb-4">${element.title}</h5>
+                    <img src="${element.screenshot}" class="card-img-top" alt="screenshot of a webpage">
                     <hr>
                     <div class="card-body">
                       <p class="card-text fs-3 mb-3">${element.description}</p>
@@ -33,7 +34,7 @@ const createProjectCards = (array) => {
                       <a href="${element.githubUrl}" class="card-link text-decoration-none fs-4 mx-0" target="_blank">GitHub</a>
                     </div>
                     <div class="w-50 d-flex justify-content-end">
-                      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal${i}">
+                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal${i}">
                     TECH USED
                     </button>
                       </div>
