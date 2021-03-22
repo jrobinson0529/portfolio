@@ -1,0 +1,14 @@
+{
+  "-MWPPMF6Qmzl4dawddQP": {
+    "firebaseKey": "-MWPPMF6Qmzl4dawddQP",
+    "title": "BINTEREST",
+    "screenshot": "https://user-images.githubusercontent.com/45837967/110980201-37ec5680-832b-11eb-8033-6cbd4d25287a.jpg",
+    "description": "Binterest is a pinterest clone with that features persistent data and user interactivity.",
+    "technologiesUsed": {
+      "techStack": ["JavaScript", "JQuery", "Sass", "Firebase", "Github"]
+    },
+    "available": true,
+    "url": "https://binterest.netlify.app/",
+    "githubUrl": "https://github.com/jrobinson0529/ASSIGNMENT-Firebase-Pinterest"
+  }
+}
