@@ -10,5 +10,29 @@
     "available": true,
     "url": "https://binterest.netlify.app/",
     "githubUrl": "https://github.com/jrobinson0529/ASSIGNMENT-Firebase-Pinterest"
-  }
+  },
+  "-MWWc0qdLMHEaDipw9rN": {
+    "firebaseKey": "-MWWc0qdLMHEaDipw9rN",
+    "title": "BEARWATCHER",
+    "screenshot": "https://github.com/jrobinson0529/ASSIGNMENT-Bear-Watcher/raw/main/src/assets/screenshot-river.jpg",
+    "description": "Bear Watcher is a lite app that allows you to keep track of bears.",
+    "technologiesUsed": {
+      "techStack": ["JavaScript", "CSS", "Github"]
+    },
+    "available": true,
+    "url": "https://jr-bearwatcher.netlify.app/",
+    "githubUrl": "https://github.com/jrobinson0529/ASSIGNMENT-Bear-Watcher"
+  },
+  "-MWWc0qhGQ-N7KjUbKyP": {
+  "firebaseKey": "-MWWc0qdLMHEaDipw9rN",
+  "title": "GitSub",
+  "screenshot": "https://github.com/jrobinson0529/gitsub-devlopmentdinos/raw/main/img/overview.png",
+  "description": "GitSub is a github clone with limited functionality. This was a group project where I was responsible for the profile sidebar and the Pinned Repos page",
+  "technologiesUsed": {
+    "techStack": ["JavaScript", "CSS", "Github"]
+  },
+  "available": true,
+  "url": "https://gitsub-dd.netlify.app/",
+  "githubUrl": "https://github.com/jrobinson0529/gitsub-devlopmentdinos"
+  } 
 }

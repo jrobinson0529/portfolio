@@ -20,7 +20,7 @@ const showProjects = (array) => {
                         </div>
                       </div>
                     </div>`;
-    $('#projectsPage').html(domString);
+    $('#projectsPage').append(domString);
   });
 };
 
