@@ -4,7 +4,8 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 const NavBar = () => {
-  const [activeItem, setActiveItem] = useState('home');
+  const [activeItem, setActiveItem] = useState('About');
+  const name = '< Jesse Robinson />';
   const handleItemClick = (e) => {
     const { target } = e;
     setActiveItem(target.innerHTML);
@@ -14,8 +15,9 @@ const NavBar = () => {
       <Segment inverted>
         <Menu inverted pointing secondary>
           <Menu.Item as={Link} to='/'
-            name='home'
-            active={activeItem === 'Home'}
+            name='about'
+            className='about'
+            active={activeItem === 'About'}
             onClick={(e) => handleItemClick(e)}
           />
           <Menu.Item
@@ -31,6 +33,9 @@ const NavBar = () => {
             active={activeItem === 'Friends'}
             onClick={(e) => handleItemClick(e)}
           />
+          <Menu.Menu position='right' className='right-name'>
+            {name}
+          </Menu.Menu>
         </Menu>
       </Segment>
     </div>
