@@ -7,5 +7,10 @@ const getProjects = () => new Promise((resolve, reject) => {
     .then((response) => resolve(Object.values(response.data)))
     .catch((error) => reject(error));
 });
+const getSingleProject = (firebaseKey) => new Promise((resolve, reject) => {
+  axios.get(`${dbUrl}/projects/${firebaseKey}.json`)
+    .then((response) => resolve(response.data))
+    .catch((error) => reject(error));
+});
 
-export default getProjects;
+export { getSingleProject, getProjects };
