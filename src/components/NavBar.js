@@ -29,9 +29,9 @@ const NavBar = ({ user }) => {
             onClick={(e) => handleItemClick(e)}
           />
           <Menu.Item
-            as={Link} to='/users'
-            name='friends'
-            active={activeItem === 'Friends'}
+            as={Link} to='/tech'
+            name='tech'
+            active={activeItem === 'Tech'}
             onClick={(e) => handleItemClick(e)}
           />
           <Menu.Menu position='right' className='right-name'>
