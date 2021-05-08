@@ -18,10 +18,10 @@ function TechCard({ ...args }) {
     return () => timeout.map((timeoutClear) => clearTimeout(timeoutClear));
   }, []);
   return (
-    <AnimateGroup animation="bounce">
-     { args.displayJS && <Icon name='js square' size='huge'/> }
-     { args.displayHtml && <Icon name='js square' size='huge'/> }
-     { args.displaySass && <Icon name='js square' size='huge'/> }
+    <AnimateGroup animation="pop">
+     { args.displayJS && <Icon className='tech-icons' name='js square' size='huge'/> }
+     { args.displayHtml && <Icon className='tech-icons' name='js square' size='huge'/> }
+     { args.displaySass && <Icon className='tech-icons' name='js square' size='huge'/> }
     </AnimateGroup>
   );
 }

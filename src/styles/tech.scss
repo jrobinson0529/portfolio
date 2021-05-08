@@ -7,3 +7,12 @@
   margin-top: 5%;
   font-family: $headerFont;
 }
+.tech-icons {
+  color: white;
+  transition: .5s !important;
+}
+.tech-icons:hover {
+  width: initial + 10px;
+  height: initial + 10px;
+  color: rgba(255, 255, 255, .5);
+}

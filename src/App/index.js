@@ -19,7 +19,6 @@ function App() {
           uid: authed.uid,
           admin: false,
         };
-        setUser(userInfo);
         getUsers().then((response) => {
           const userExists = response.filter((object) => object.uid === userInfo.uid);
           if (userExists.length === 0) {
@@ -37,7 +36,7 @@ function App() {
     <div className='App'>
      <Router>
         <NavBar user={user}/>
-        <Routes />
+        <Routes user={user}/>
       </Router>
     </div>
   );
