@@ -16,5 +16,9 @@ const getSingleUser = (id) => new Promise((resolve, reject) => {
     .then((response) => resolve(response.data))
     .catch((error) => reject(error));
 });
-
-export { createUser, getSingleUser };
+const getUsers = () => new Promise((resolve, reject) => {
+  axios.get(`${dbURL}/users.json`)
+    .then((response) => resolve(Object.values(response.data)))
+    .catch((error) => reject(error));
+});
+export { createUser, getSingleUser, getUsers };

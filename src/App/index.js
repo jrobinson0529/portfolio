@@ -5,7 +5,7 @@ import 'firebase/auth';
 import './App.scss';
 import Routes from '../helpers/Routes';
 import NavBar from '../components/NavBar';
-import { createUser } from '../helpers/data/userData';
+import { createUser, getSingleUser, getUsers } from '../helpers/data/userData';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -19,8 +19,15 @@ function App() {
           uid: authed.uid,
           admin: false,
         };
-        createUser(userInfo);
         setUser(userInfo);
+        getUsers().then((response) => {
+          const userExists = response.filter((object) => object.uid === userInfo.uid);
+          if (userExists.length === 0) {
+            createUser(userInfo);
+          } else {
+            getSingleUser(userExists[0].id).then(setUser);
+          }
+        });
       } else if (user || user === null) {
         setUser(false);
       }
