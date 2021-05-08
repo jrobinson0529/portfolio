@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import { Menu, Segment } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import NavNameDropdown from './NavNameDropdown';
 
-const NavBar = () => {
+const NavBar = ({ user }) => {
   const [activeItem, setActiveItem] = useState('About');
-  const name = '< Jesse Robinson />';
+  // const name = '< Jesse Robinson />';
   const handleItemClick = (e) => {
     const { target } = e;
     setActiveItem(target.innerHTML);
@@ -34,7 +35,7 @@ const NavBar = () => {
             onClick={(e) => handleItemClick(e)}
           />
           <Menu.Menu position='right' className='right-name'>
-            {name}
+            <NavNameDropdown user={user}/>
           </Menu.Menu>
         </Menu>
       </Segment>

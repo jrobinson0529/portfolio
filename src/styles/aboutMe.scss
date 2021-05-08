@@ -1,3 +1,8 @@
+@import 'variables';
+
 .about-me-card {
   width: 15rem !important;
+}
+#about-me-h1 {
+  font-family: $headerFont !important;
 }
