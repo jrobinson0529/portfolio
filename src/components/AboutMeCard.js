@@ -34,8 +34,13 @@ const AboutMeCard = () => {
     setLearnMore((prevState) => !prevState);
   };
   return (
-  <Segment className='about-me-container d-flex w-75 justify-content-between mx-auto p-5 flex-wrap' inverted circular={true} style={{
+  <Segment className='about-me-container d-flex w-75 justify-content-between mx-auto p-5 flex-wrap' inverted style={{
     marginTop: '50px',
+    transition: 'all .3s ease',
+    borderTopLeftRadius: '200px',
+    borderTopRightRadius: '200px',
+    borderRadius: '200px',
+    animation: animations.fadeInUp,
   }}>
   <Segment className='h-50' style={{
     backgroundColor: 'transparent',
@@ -44,10 +49,12 @@ const AboutMeCard = () => {
     boxShadow: 'none',
     padding: '0px 40px 20px',
     fontSize: '1.4em',
+    overflow: 'hidden',
+    transition: 'all .3s ease-out',
   }}>
     <Image src={profilePicture} size='medium' floated='left' circular style={{ boxShadow: '1px 1px 20px black' }}/>
-    <Header as='h1' inverted>About Me</Header>
-    <Divider inverted></Divider>
+    <Header as='h1' inverted id="about-me-h1">About Me</Header>
+    <Divider inverted style={{ width: '75%', margin: '30px auto' }}></Divider>
     <p>
       At an early age I was infatuated with technology.
     </p>
