@@ -23,9 +23,9 @@ const NavBar = ({ user }) => {
           />
           <Menu.Item
             as={Link}
-            to='/about'
-            name='messages'
-            active={activeItem === 'Messages'}
+            to='/projects'
+            name='projects'
+            active={activeItem === 'Projects'}
             onClick={(e) => handleItemClick(e)}
           />
           <Menu.Item
