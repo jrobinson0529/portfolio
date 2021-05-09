@@ -7,8 +7,8 @@ const getProjects = () => new Promise((resolve, reject) => {
     .then((response) => resolve(Object.values(response.data)))
     .catch((error) => reject(error));
 });
-const getSingleProject = (firebaseKey) => new Promise((resolve, reject) => {
-  axios.get(`${dbUrl}/projects/${firebaseKey}.json`)
+const getSingleProject = (id) => new Promise((resolve, reject) => {
+  axios.get(`${dbUrl}/projects/${id}.json`)
     .then((response) => resolve(response.data))
     .catch((error) => reject(error));
 });
