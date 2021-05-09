@@ -12,14 +12,16 @@ const ProjectCard = ({ ...projectObject }) => (
           margin: '20px',
           animation: animations.fadeInUp,
         }}>
-          <Image as={Card} src={projectObject.imageUrl} fluid/>
+          <Image src={projectObject.imageUrl} fluid style={{
+            height: '300px', border: '2px solid rgba(255, 255, 255, .9)', borderRadius: '10px'
+          }}/>
         </div>
       </Reveal.Content>
       <Reveal.Content hidden>
       <Card style={{
-        width: '45rem',
+        width: '43rem',
         height: 'auto',
-        margin: '20px',
+        margin: '25px auto',
         animation: animations.fadeInUp,
         color: 'black',
       }}>

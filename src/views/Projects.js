@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Card } from 'semantic-ui-react';
+import { Card, Header } from 'semantic-ui-react';
 import { getProjects } from '../helpers/data/projectsData';
 import ProjectCard from '../components/ProjectCard';
 
@@ -9,8 +9,8 @@ const Projects = () => {
     getProjects().then(setProjects);
   }, []);
   return (
-      <div>
-        <h1>Projects will go here</h1>
+      <div style={{ fontSize: '30px' }}>
+        <Header inverted id='projectsHeader' size='large'>My Projects</Header>
         <Card.Group centered className='projects-container'>
         {projects.map((projectObject) => <ProjectCard
           key={projectObject.id}
