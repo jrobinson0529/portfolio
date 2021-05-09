@@ -8,6 +8,7 @@
   |___|___||____/     |__|   \___/ |__|\_| |__|  |__|    \___/ |_____||____|\___/ 
 ```
 ## Overview
+[![Netlify Status](https://api.netlify.com/api/v1/badges/cec51bc5-81aa-4b1e-ab6c-932b5faf9179/deploy-status)](https://app.netlify.com/sites/jesserobinson/deploys)
 
   #### A single page application/portfolio that displays to the user
   - A header that displays my name and links to each section of the page

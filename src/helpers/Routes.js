@@ -3,7 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Home from '../views/Home';
 import Projects from '../views/Projects';
-import Users from '../views/Users';
+import Tech from '../views/Tech';
 
 function Routes({ user, time }) {
   return (
@@ -11,7 +11,7 @@ function Routes({ user, time }) {
       <Switch>
         <Route exact path="/" component={() => <Home user={user} time={time}/>} />
         <Route exact path="/projects" component={() => <Projects user={user} />} />
-        <Route exact path="/users" component={() => <Users user={user} />} />
+        <Route exact path="/tech" component={() => <Tech user={user} />} />
       </Switch>
     </div>
   );
