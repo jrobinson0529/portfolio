@@ -1,10 +1,16 @@
 import React from 'react';
 import { animations } from 'react-animation';
+import { useHistory } from 'react-router-dom';
 import {
   Card, Icon, Image, Reveal, Button
 } from 'semantic-ui-react';
 
-const ProjectCard = ({ ...projectObject }) => (
+const ProjectCard = ({ ...projectObject }) => {
+  const history = useHistory();
+  const viewProject = () => {
+    history.push(`/projects/${projectObject.id}`);
+  };
+  return (
     <Reveal animated='move up'>
       <Reveal.Content visible>
         <div style={{
@@ -32,7 +38,7 @@ const ProjectCard = ({ ...projectObject }) => (
         </Card.Description>
       </Card.Content>
       <Card.Content extra>
-        <Button>Click me</Button>
+        <Button onClick={viewProject}>View</Button>
       </Card.Content>
       <Card.Content extra>
         <a>
@@ -43,6 +49,7 @@ const ProjectCard = ({ ...projectObject }) => (
       </Card>
       </Reveal.Content>
     </Reveal>
-);
+  );
+};
 
 export default ProjectCard;

@@ -7,7 +7,9 @@
     "available": true,
     "siteUrl": "https://binterest.netlify.app/",
     "githubUrl": "https://github.com/jrobinson0529/ASSIGNMENT-Firebase-Pinterest",
-    "likes": 2
+    "likes": 2,
+    "videoUrl": "https://www.loom.com/embed/0b596aa1acda41e9bcd6909fabaff01a",
+    "techIcons": ["js square", "html5", "sass", "fire"]
   },
   "-MWWc0qdLMHEaDipw9rN": {
     "id": "-MWWc0qdLMHEaDipw9rN",
@@ -17,7 +19,9 @@
     "available": true,
     "siteUrl": "https://jr-bearwatcher.netlify.app/",
     "githubUrl": "https://github.com/jrobinson0529/ASSIGNMENT-Bear-Watcher",
-    "likes": 15
+    "likes": 15,
+    "videoUrl": "https://www.loom.com/share/fbdd6538cc744e28a277fd38a7254ae5",
+    "techIcons": ["js square", "html5", "sass"]
   },
   "-MWWc0qhGQ-N7KjUbKyP": {
   "id": "-MWWc0qhGQ-N7KjUbKyP",
@@ -27,6 +31,8 @@
   "available": true,
   "siteUrl": "https://gitsub-dd.netlify.app/",
   "githubUrl": "https://github.com/jrobinson0529/gitsub-devlopmentdinos",
-  "likes": 21
+  "likes": 21,
+  "videoUrl": "https://www.loom.com/share/6e56c55baa27451db370431f5002628b",
+  "techIcons": ["js square", "html5", "sass", "fire"]
   } 
 }
