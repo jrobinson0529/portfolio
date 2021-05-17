@@ -20,8 +20,8 @@ function TechCard({ ...args }) {
   return (
     <AnimateGroup animation="pop">
      { args.displayJS && <Icon className='tech-icons' name='js square' size='huge'/> }
-     { args.displayHtml && <Icon className='tech-icons' name='js square' size='huge'/> }
-     { args.displaySass && <Icon className='tech-icons' name='js square' size='huge'/> }
+     { args.displayHtml && <Icon className='tech-icons' name='html5' size='huge'/> }
+     { args.displaySass && <Icon className='tech-icons' name='sass' size='huge'/> }
     </AnimateGroup>
   );
 }
