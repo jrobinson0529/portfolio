@@ -1,0 +1,16 @@
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+@import './tech.scss';
+@import './aboutMe.scss';
+@import './projects.scss';
+@import './nav.scss';
+@import 'variables';
+
+#root {
+  font-family: $primaryfont;
+  color: white;
+  background-color: black;
+}
+body {
+  height: 100vh;
+  background-color: $favColor !important;
+}

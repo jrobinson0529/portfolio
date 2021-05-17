@@ -1,0 +1,38 @@
+{
+  "-MWPPMF6Qmzl4dawddQP": {
+    "id": "-MWPPMF6Qmzl4dawddQP",
+    "title": "BINTEREST",
+    "imageUrl": "https://user-images.githubusercontent.com/45837967/110980201-37ec5680-832b-11eb-8033-6cbd4d25287a.jpg",
+    "description": "Binterest is a pinterest clone with that features persistent data and user interactivity.",
+    "available": true,
+    "siteUrl": "https://binterest.netlify.app/",
+    "githubUrl": "https://github.com/jrobinson0529/ASSIGNMENT-Firebase-Pinterest",
+    "likes": 2,
+    "videoUrl": "https://www.loom.com/embed/0b596aa1acda41e9bcd6909fabaff01a",
+    "techIcons": ["js square", "html5", "sass", "fire"]
+  },
+  "-MWWc0qdLMHEaDipw9rN": {
+    "id": "-MWWc0qdLMHEaDipw9rN",
+    "title": "BEARWATCHER",
+    "imageUrl": "https://github.com/jrobinson0529/ASSIGNMENT-Bear-Watcher/raw/main/src/assets/screenshot-river.jpg",
+    "description": "Bear Watcher is a lite app that allows you to keep track of bears.",
+    "available": true,
+    "siteUrl": "https://jr-bearwatcher.netlify.app/",
+    "githubUrl": "https://github.com/jrobinson0529/ASSIGNMENT-Bear-Watcher",
+    "likes": 15,
+    "videoUrl": "https://www.loom.com/share/fbdd6538cc744e28a277fd38a7254ae5",
+    "techIcons": ["js square", "html5", "sass"]
+  },
+  "-MWWc0qhGQ-N7KjUbKyP": {
+  "id": "-MWWc0qhGQ-N7KjUbKyP",
+  "title": "GitSub",
+  "imageUrl": "https://github.com/jrobinson0529/gitsub-devlopmentdinos/raw/main/img/overview.png",
+  "description": "GitSub is a github clone with limited functionality. This was a group project where I was responsible for the profile sidebar and the Pinned Repos page",
+  "available": true,
+  "siteUrl": "https://gitsub-dd.netlify.app/",
+  "githubUrl": "https://github.com/jrobinson0529/gitsub-devlopmentdinos",
+  "likes": 21,
+  "videoUrl": "https://www.loom.com/share/6e56c55baa27451db370431f5002628b",
+  "techIcons": ["js square", "html5", "sass", "fire"]
+  } 
+}

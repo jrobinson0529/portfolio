@@ -1,3 +1,2 @@
-webpack.config.js
-node_modules
-build
+reportWebVitals.js
+/public/_redirects.js
