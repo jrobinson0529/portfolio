@@ -5,10 +5,14 @@
 @import './nav.scss';
 @import 'variables';
 
+html {
+  scroll-behavior: smooth;
+}
 #root {
   font-family: $primaryfont;
   color: white;
   background-color: black;
+  scroll-behavior: smooth;
 }
 body {
   height: 100vh;

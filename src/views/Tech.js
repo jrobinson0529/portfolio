@@ -6,6 +6,10 @@ function Tech() {
   const [displayJS, setDisplayJS] = useState(false);
   const [displayHtml, setDisplayHtml] = useState(false);
   const [displaySass, setDisplaySass] = useState(false);
+  const [displayReact, setDisplayReact] = useState(false);
+  const [displayVsc, setDisplayVsc] = useState(false);
+  const [displayGit, setDisplayGit] = useState(false);
+  const [displayPm, setDisplayPm] = useState(false);
 
   return (
     <div className='tech-view'>
@@ -20,6 +24,14 @@ function Tech() {
           setDisplayHtml={setDisplayHtml}
           displaySass={displaySass}
           setDisplaySass={setDisplaySass}
+          displayReact={displayReact}
+          setDisplayReact={setDisplayReact}
+          displayVsc={displayVsc}
+          setDisplayVsc={setDisplayVsc}
+          displayGit={displayGit}
+          setDisplayGit={setDisplayGit}
+          displayPm={displayPm}
+          setDisplayPm={setDisplayPm}
           />
       </div>
     </div>
