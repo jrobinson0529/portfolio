@@ -1,38 +1,50 @@
 {
   "-MWPPMF6Qmzl4dawddQP": {
-    "firebaseKey": "-MWPPMF6Qmzl4dawddQP",
+    "id": "-MWPPMF6Qmzl4dawddQP",
     "title": "BINTEREST",
-    "screenshot": "https://user-images.githubusercontent.com/45837967/110980201-37ec5680-832b-11eb-8033-6cbd4d25287a.jpg",
+    "imageUrl": "https://user-images.githubusercontent.com/45837967/110980201-37ec5680-832b-11eb-8033-6cbd4d25287a.jpg",
     "description": "Binterest is a pinterest clone with that features persistent data and user interactivity.",
-    "technologiesUsed": {
-      "techStack": ["JavaScript", "JQuery", "Sass", "Firebase", "Github"]
-    },
     "available": true,
-    "url": "https://binterest.netlify.app/",
-    "githubUrl": "https://github.com/jrobinson0529/ASSIGNMENT-Firebase-Pinterest"
+    "siteUrl": "https://binterest.netlify.app/",
+    "githubUrl": "https://github.com/jrobinson0529/ASSIGNMENT-Firebase-Pinterest",
+    "likes": 2,
+    "videoUrl": "https://www.loom.com/embed/0b596aa1acda41e9bcd6909fabaff01a",
+    "techIcons": ["js square", "html5", "sass", "fire"]
   },
   "-MWWc0qdLMHEaDipw9rN": {
-    "firebaseKey": "-MWWc0qdLMHEaDipw9rN",
+    "id": "-MWWc0qdLMHEaDipw9rN",
     "title": "BEARWATCHER",
-    "screenshot": "https://github.com/jrobinson0529/ASSIGNMENT-Bear-Watcher/raw/main/src/assets/screenshot-river.jpg",
+    "imageUrl": "https://github.com/jrobinson0529/ASSIGNMENT-Bear-Watcher/raw/main/src/assets/screenshot-river.jpg",
     "description": "Bear Watcher is a lite app that allows you to keep track of bears.",
-    "technologiesUsed": {
-      "techStack": ["JavaScript", "CSS", "Github"]
-    },
     "available": true,
-    "url": "https://jr-bearwatcher.netlify.app/",
-    "githubUrl": "https://github.com/jrobinson0529/ASSIGNMENT-Bear-Watcher"
+    "siteUrl": "https://jr-bearwatcher.netlify.app/",
+    "githubUrl": "https://github.com/jrobinson0529/ASSIGNMENT-Bear-Watcher",
+    "likes": 15,
+    "videoUrl": "https://www.loom.com/embed/fbdd6538cc744e28a277fd38a7254ae5",
+    "techIcons": ["js square", "html5", "sass"]
   },
   "-MWWc0qhGQ-N7KjUbKyP": {
-  "firebaseKey": "-MWWc0qdLMHEaDipw9rN",
+  "id": "-MWWc0qhGQ-N7KjUbKyP",
   "title": "GitSub",
-  "screenshot": "https://github.com/jrobinson0529/gitsub-devlopmentdinos/raw/main/img/overview.png",
+  "imageUrl": "https://github.com/jrobinson0529/gitsub-devlopmentdinos/raw/main/img/overview.png",
   "description": "GitSub is a github clone with limited functionality. This was a group project where I was responsible for the profile sidebar and the Pinned Repos page",
-  "technologiesUsed": {
-    "techStack": ["JavaScript", "CSS", "Github"]
-  },
   "available": true,
-  "url": "https://gitsub-dd.netlify.app/",
-  "githubUrl": "https://github.com/jrobinson0529/gitsub-devlopmentdinos"
-  } 
+  "siteUrl": "https://gitsub-dd.netlify.app/",
+  "githubUrl": "https://github.com/jrobinson0529/gitsub-devlopmentdinos",
+  "likes": 21,
+  "videoUrl": "https://www.loom.com/embed/6e56c55baa27451db370431f5002628b",
+  "techIcons": ["js square", "html5", "sass", "fire"]
+  },
+  "-MWWc0qhGQ-ApOraaTy": {
+    "id": "-MWWc0qhGQ-ApOraaTy",
+    "title": "React Sports Roster",
+    "imageUrl": "https://user-images.githubusercontent.com/45837967/118664024-c1e6ee80-b7b6-11eb-9e28-c5ae5c80f1a2.png",
+    "description": "This is the first full CRUD React application that I developed. It is a card based team roster builder where you can add, update, delete, create and read cards based on basketball. Full CRUD in React. EXCITING!!!",
+    "available": true,
+    "siteUrl": "https://jolly-heyrovsky-3e5b48.netlify.app/home",
+    "githubUrl": "https://github.com/jrobinson0529/react-sports-roster",
+    "likes": 7,
+    "videoUrl": "https://www.loom.com/embed/99f5b86c4d554050aad2521e79bd4d69",
+    "techIcons": ["js square", "react", "sass", "fire"]
+    } 
 }

@@ -1,20 +1,24 @@
-import React, { Component } from 'react';
-import { Button, Progress } from 'semantic-ui-react';
+import React, { useEffect, useState } from 'react';
+import { Card } from 'semantic-ui-react';
+import { getProjects } from '../helpers/data/projectsData';
+import ProjectCard from '../components/ProjectCard';
+import { StyledHeader } from '../components/styledComponents/StyledHeader';
 
-export default class aProgressExampleIndicating extends Component {
-  state = { percent: 44 }
-
-  increment = () => this.setState((prevState) => ({
-    percent: prevState.percent >= 100 ? 0 : prevState.percent + 20,
-  }))
-
-  render() {
-    return (
-      <div>
-        <h1>Projects will go here</h1>
-        <Progress percent={this.state.percent} indicating />
-        <Button onClick={this.increment}>Increment</Button>
+const Projects = () => {
+  const [projects, setProjects] = useState([]);
+  useEffect(() => {
+    getProjects().then(setProjects);
+  }, []);
+  return (
+      <div style={{ fontSize: '30px' }}>
+        <StyledHeader inputFontSize='48px'>Projects</StyledHeader>
+        <Card.Group centered className='projects-container'>
+        {projects.map((projectObject) => <ProjectCard
+          key={projectObject.id}
+          {...projectObject}/>)}
+        </Card.Group>
       </div>
-    );
-  }
-}
+  );
+};
+
+export default Projects;
