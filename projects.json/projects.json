@@ -34,5 +34,17 @@
   "likes": 21,
   "videoUrl": "https://www.loom.com/embed/6e56c55baa27451db370431f5002628b",
   "techIcons": ["js square", "html5", "sass", "fire"]
-  } 
+  },
+  "-MWWc0qhGQ-ApOraaTy": {
+    "id": "-MWWc0qhGQ-ApOraaTy",
+    "title": "React Sports Roster",
+    "imageUrl": "https://user-images.githubusercontent.com/45837967/118664024-c1e6ee80-b7b6-11eb-9e28-c5ae5c80f1a2.png",
+    "description": "This is the first full CRUD React application that I developed. It is a card based team roster builder where you can add, update, delete, create and read cards based on basketball. Full CRUD in React. EXCITING!!!",
+    "available": true,
+    "siteUrl": "https://jolly-heyrovsky-3e5b48.netlify.app/home",
+    "githubUrl": "https://github.com/jrobinson0529/react-sports-roster",
+    "likes": 7,
+    "videoUrl": "https://www.loom.com/embed/99f5b86c4d554050aad2521e79bd4d69",
+    "techIcons": ["js square", "react", "sass", "fire"]
+    } 
 }
