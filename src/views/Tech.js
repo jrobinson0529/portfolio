@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Header } from 'semantic-ui-react';
+import { StyledHeader } from '../components/styledComponents/StyledHeader';
 import TechCard from '../components/TechCard';
 
 function Tech() {
@@ -9,9 +9,9 @@ function Tech() {
 
   return (
     <div className='tech-view'>
-      <Header inverted id='techHeader' size='huge'>
+      <StyledHeader>
         Technologies I work with
-      </Header>
+      </StyledHeader>
       <div>
         <TechCard
           displayJS={displayJS}

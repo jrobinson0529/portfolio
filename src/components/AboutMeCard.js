@@ -3,10 +3,10 @@ import { animations } from 'react-animation';
 import {
   Button,
   Divider,
-  Header,
   Icon, Image, Segment
 } from 'semantic-ui-react';
 import profilePicture from './assets/images/profilepic.jpg';
+import { AboutMeHeader } from './styledComponents/StyledHeader';
 
 const LearnMore = () => <Segment className='h-50' style={{
   backgroundColor: 'transparent',
@@ -53,7 +53,7 @@ const AboutMeCard = () => {
     transition: 'all .3s ease-out',
   }}>
     <Image src={profilePicture} size='medium' floated='left' circular style={{ boxShadow: '1px 1px 20px black' }}/>
-    <Header as='h1' inverted id="about-me-h1">About Me</Header>
+    <AboutMeHeader inputFontSize='34px'>About Me</AboutMeHeader>
     <Divider inverted style={{ width: '75%', margin: '30px auto' }}></Divider>
     <p>
       At an early age I was infatuated with technology.
