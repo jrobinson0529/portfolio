@@ -4,11 +4,14 @@ import styled from 'styled-components';
 const StyledHeader = styled(Header)`
  &&& {
   color: white;
-  font-size: 48px;
-  margin-top: 3%;
-  margin-bottom: 4%;
+  font-size: ${(props) => props.inputFontSize || '48px'};
+  margin: 3% 0;
   font-family: 'Merriweather', serif;
  }
 `;
-
-export default StyledHeader;
+const AboutMeHeader = styled(StyledHeader)`
+  &&& {
+    margin: 5px;
+  }
+`;
+export { AboutMeHeader, StyledHeader };

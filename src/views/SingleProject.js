@@ -64,17 +64,32 @@ function SingleProject() {
             <p>{project.description}</p>
             <Divider inverted></Divider>
             <Button.Group inverted>
-            <Button inverted as='a' href={project.githubUrl} target='_blank'>
-              <Icon name='github' /> GitHub
+              <Button inverted as="a" href={project.githubUrl} target="_blank">
+                <Icon name="github" /> GitHub
+              </Button>
+              <Button inverted as="a" href={project.siteUrl} target="_blank">
+                <Icon name="chrome" /> Site
+              </Button>
+              <Button inverted onClick={toggleLiveDemo}>
+                <Icon name="eye" /> Live Demo
+              </Button>
+            </Button.Group>
+            <Button
+              className="back-to-projects-btn mx-3"
+              onClick={viewProjects}
+            >
+              <Icon name="backward" /> Back to projects
             </Button>
-            <Button inverted as='a' href={project.siteUrl} target='_blank'>
-            <Icon name='chrome' /> Site
-            </Button>
-            <Button inverted onClick={toggleLiveDemo}>
-            <Icon name='eye' /> Live Demo
-            </Button>
-          </Button.Group>
-          <Button className='back-to-projects-btn mx-3' onClick={viewProjects}><Icon name="backward" /> Back to projects</Button>
+          </Container>
+          <Container textAlign="justified" className="my-5">
+            {project.techIcons?.map((icon, i) => (
+              <Icon
+                key={i}
+                className="tech-icons"
+                name={icon}
+                size="huge"
+              />
+            ))}
           </Container>
         </div>
       )}
