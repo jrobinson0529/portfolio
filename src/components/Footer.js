@@ -14,8 +14,8 @@ function Footer() {
       <Segment inverted vertical style={{ padding: '5em 0em' }}>
         <Container>
           <Grid divided inverted stackable columns="equal" centered>
-            <Grid.Row centered>
-              <Grid.Column width={6} centered>
+            <Grid.Row>
+              <Grid.Column width={6}>
                 <List
                   link
                   inverted
