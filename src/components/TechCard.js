@@ -32,14 +32,14 @@ function TechCard({ ...args }) {
     return () => timeout.map((timeoutClear) => clearTimeout(timeoutClear));
   }, []);
   return (
-    <AnimateGroup animation="pop" className='d-flex flex-wrap justify-content-around w-50 mx-auto'>
+    <AnimateGroup animation="pop" className='d-flex flex-wrap justify-content-center mx-auto tech-container'>
      { args.displayJS && <Icon className='tech-icons' name='js square' size='huge'/> }
      { args.displayHtml && <Icon className='tech-icons' name='html5' size='huge'/> }
      { args.displaySass && <Icon className='tech-icons' name='sass' size='huge'/> }
      { args.displayReact && <Icon className='tech-icons' name='react' size='huge'/>}
      { args.displayGit && <Icon className='tech-icons' name='github' size='huge'/>}
-     { args.displayVsc && <Image src={vscIcon} size='tiny' />}
-     { args.displayPm && <Image src={postmanIcon} size='small' />}
+     { args.displayVsc && <Image src={vscIcon} size='tiny' className='tech-icons'/>}
+     { args.displayPm && <Image src={postmanIcon} size='small' className='tech-icons'/>}
     </AnimateGroup>
   );
 }
