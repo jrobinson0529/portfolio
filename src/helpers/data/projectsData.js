@@ -12,5 +12,13 @@ const getSingleProject = (id) => new Promise((resolve, reject) => {
     .then((response) => resolve(response.data))
     .catch((error) => reject(error));
 });
-
-export { getSingleProject, getProjects };
+const createProject = (projectObject) => new Promise((resolve, reject) => {
+  axios.post(`${dbUrl}/projects.json`, projectObject)
+    .then((response) => {
+      const body = { id: response.data.name };
+      axios.patch(`${dbUrl}/projects/${response.data.name}.json`, body);
+    }).catch((error) => reject(error));
+});
+export {
+  getSingleProject, getProjects, createProject
+};

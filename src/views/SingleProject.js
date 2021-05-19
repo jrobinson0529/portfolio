@@ -3,6 +3,7 @@ import { useHistory, useParams } from 'react-router-dom';
 import {
   Container, Divider, Header, Button, Icon, Label
 } from 'semantic-ui-react';
+import Footer from '../components/Footer';
 import { getSingleProject } from '../helpers/data/projectsData';
 
 function SingleProject() {
@@ -93,6 +94,7 @@ function SingleProject() {
           </Container>
         </div>
       )}
+      <Footer bottom='-25em'/>
     </div>
   );
 }

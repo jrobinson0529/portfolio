@@ -6,7 +6,6 @@ import './App.scss';
 import Routes from '../helpers/Routes';
 import NavBar from '../components/NavBar';
 import { createUser, getSingleUser, getUsers } from '../helpers/data/userData';
-import Footer from '../components/Footer';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -38,7 +37,6 @@ function App() {
      <Router>
         <NavBar user={user}/>
         <Routes user={user}/>
-        <Footer />
       </Router>
     </div>
   );

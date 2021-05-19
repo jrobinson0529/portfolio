@@ -3,6 +3,7 @@ import { Card } from 'semantic-ui-react';
 import { getProjects } from '../helpers/data/projectsData';
 import ProjectCard from '../components/ProjectCard';
 import { StyledHeader } from '../components/styledComponents/StyledHeader';
+import Footer from '../components/Footer';
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
@@ -17,6 +18,7 @@ const Projects = () => {
           key={projectObject.id}
           {...projectObject}/>)}
         </Card.Group>
+        <Footer bottom='-35em'/>
       </div>
   );
 };
