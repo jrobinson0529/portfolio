@@ -53,7 +53,7 @@ const AboutMeCard = () => {
     transition: 'all .3s ease-out',
   }}>
     <Image src={profilePicture} size='medium' floated='left' circular style={{ boxShadow: '1px 1px 20px black' }}/>
-    <AboutMeHeader inputFontSize='34px'>About Me</AboutMeHeader>
+    <AboutMeHeader inputfontsize='34px'>About Me</AboutMeHeader>
     <Divider inverted style={{ width: '75%', margin: '30px auto' }}></Divider>
     <p>
       At an early age I was infatuated with technology.

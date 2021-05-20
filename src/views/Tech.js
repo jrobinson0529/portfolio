@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Footer from '../components/Footer';
 import { StyledHeader } from '../components/styledComponents/StyledHeader';
 import TechCard from '../components/TechCard';
 
@@ -34,6 +35,7 @@ function Tech() {
           setDisplayPm={setDisplayPm}
           />
       </div>
+      <Footer bottom='-25em'/>
     </div>
   );
 }

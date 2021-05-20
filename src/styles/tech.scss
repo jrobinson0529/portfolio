@@ -9,10 +9,14 @@
 }
 .tech-icons {
   color: white;
+  margin: 20px!important;
   transition: .5s !important;
 }
 .tech-icons:hover {
   width: initial + 10px;
   height: initial + 10px;
   color: rgba(255, 255, 255, .5);
+}
+.tech-container {
+  width: 40%;
 }

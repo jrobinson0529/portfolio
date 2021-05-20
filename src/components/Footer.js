@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   Segment,
   Container,
@@ -8,14 +9,18 @@ import {
   Header
 } from 'semantic-ui-react';
 
-function Footer() {
+function Footer({ bottom }) {
   return (
-    <div className="profile-footer">
+    <div className="Footer" id='Footer' style={{
+      position: 'absolute',
+      bottom,
+      width: '100%'
+    }}>
       <Segment inverted vertical style={{ padding: '5em 0em' }}>
         <Container>
           <Grid divided inverted stackable columns="equal" centered>
-            <Grid.Row centered>
-              <Grid.Column width={6} centered>
+            <Grid.Row>
+              <Grid.Column width={6}>
                 <List
                   link
                   inverted
@@ -76,5 +81,8 @@ function Footer() {
     </div>
   );
 }
+Footer.propTypes = {
+  bottom: PropTypes.string,
+};
 
 export default Footer;
