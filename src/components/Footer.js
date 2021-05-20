@@ -25,7 +25,7 @@ function Footer({ bottom }) {
                   link
                   inverted
                   horizontal
-                  className="d-flex justify-content-between"
+                  className="footer-icon-container"
                 >
                   <List.Item
                     as="a"
@@ -65,7 +65,7 @@ function Footer({ bottom }) {
           </Grid>
         </Container>
         <Container>
-          <Header inverted className="text-muted my-5">
+          <Header inverted className="footer-header">
             &copy; 2021 Jesse Robinson
           </Header>
         </Container>

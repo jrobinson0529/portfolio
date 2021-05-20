@@ -3,7 +3,7 @@ import ProjectForm from '../components/ProjectForm';
 
 function CreateProject() {
   return (
-    <div className='p-5'>
+    <div className='project-form-container'>
       <ProjectForm formTitle={'Create Project'}/>
     </div>
   );
