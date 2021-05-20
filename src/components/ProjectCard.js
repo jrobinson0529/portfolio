@@ -24,6 +24,22 @@ const ProjectCard = ({ user, setProjects, ...projectObject }) => {
       default:
     }
   };
+  const DeleteButton = () => (
+    <>
+            <Button negative onClick={() => handleClick('open')}>Delete</Button>
+        <TransitionablePortal open={open}>
+        <Confirm className='delete-modal'
+          open={open}
+          content={`Would you like to delete ${projectObject.title}?`}
+          onCancel={() => handleClick('open')}
+          onConfirm={() => {
+            handleClick('delete');
+            handleClick('open');
+          }}
+        />
+        </TransitionablePortal>
+    </>
+  );
 
   return (
     <Reveal animated='move up'>
@@ -54,18 +70,7 @@ const ProjectCard = ({ user, setProjects, ...projectObject }) => {
       </Card.Content>
       <Card.Content extra>
         <Button onClick={viewProject}>View</Button>
-        <Button negative onClick={() => handleClick('open')}>Delete</Button>
-        <TransitionablePortal open={open}>
-        <Confirm className='delete-modal'
-          open={open}
-          content={`Would you like to delete ${projectObject.title}?`}
-          onCancel={() => handleClick('open')}
-          onConfirm={() => {
-            handleClick('delete');
-            handleClick('open');
-          }}
-        />
-        </TransitionablePortal>
+        {user?.admin && <DeleteButton />}
       </Card.Content>
       <Card.Content extra>
         <a>

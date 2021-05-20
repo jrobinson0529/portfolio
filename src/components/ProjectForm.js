@@ -41,7 +41,7 @@ function ProjectForm({ formTitle }) {
     }
   };
   return (
-    <Segment inverted className='my-5 w-75 mx-auto'>
+    <Segment inverted className='project-inner-form-container'>
       <StyledHeader>{formTitle}</StyledHeader>
       <Form inverted onSubmit={handleSubmit}>
       <Form.Group>
@@ -51,7 +51,7 @@ function ProjectForm({ formTitle }) {
           value={project.title}
           onChange={handleInputChange}
           type='text'
-          className='w-50 mx-auto'
+          className='project-form-title-input'
           error={{
             content: 'Please enter a title',
             pointing: 'below',
@@ -61,7 +61,7 @@ function ProjectForm({ formTitle }) {
         value={project.title}
         onChange={handleInputChange}
         type='text'
-        className='w-50 mx-auto'
+        className='project-form-title-input'
       />
         }
         </Form.Group>
