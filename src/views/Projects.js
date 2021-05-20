@@ -16,6 +16,7 @@ const Projects = () => {
         <Card.Group centered className='projects-container'>
         {projects.map((projectObject) => <ProjectCard
           key={projectObject.id}
+          setProjects={setProjects}
           {...projectObject}/>)}
         </Card.Group>
         <Footer bottom='-35em'/>

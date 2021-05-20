@@ -1,15 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { animations } from 'react-animation';
 import { useHistory } from 'react-router-dom';
 import {
-  Card, Icon, Image, Reveal, Button
+  Card, Icon, Image, Reveal, Button, Confirm
 } from 'semantic-ui-react';
+import { deleteProject } from '../helpers/data/projectsData';
 
-const ProjectCard = ({ ...projectObject }) => {
+const ProjectCard = ({ user, setProjects, ...projectObject }) => {
+  const [open, setOpen] = useState(false);
   const history = useHistory();
   const viewProject = () => {
     history.push(`/projects/${projectObject.id}`);
   };
+  const handleClick = (type) => {
+    switch (type) {
+      case 'open':
+        setOpen((prevState) => !prevState);
+        break;
+      case 'delete':
+        deleteProject(projectObject.id).then(setProjects);
+        break;
+      default:
+    }
+  };
+
   return (
     <Reveal animated='move up'>
       <Reveal.Content visible>
@@ -39,6 +54,16 @@ const ProjectCard = ({ ...projectObject }) => {
       </Card.Content>
       <Card.Content extra>
         <Button onClick={viewProject}>View</Button>
+        <Button negative onClick={() => handleClick('open')}>Delete</Button>
+        <Confirm size='small' className='delete-modal'
+          open={open}
+          content={`Would you like to delete ${projectObject.title}?`}
+          onCancel={() => handleClick('open')}
+          onConfirm={() => {
+            handleClick('delete');
+            handleClick('open');
+          }}
+        />
       </Card.Content>
       <Card.Content extra>
         <a>
@@ -50,6 +75,10 @@ const ProjectCard = ({ ...projectObject }) => {
       </Reveal.Content>
     </Reveal>
   );
+};
+ProjectCard.propTypes = {
+  setProjects: PropTypes.func,
+  user: PropTypes.any
 };
 
 export default ProjectCard;
