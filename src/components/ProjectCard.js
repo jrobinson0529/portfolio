@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { animations } from 'react-animation';
 import { useHistory } from 'react-router-dom';
 import {
-  Card, Icon, Image, Reveal, Button, Confirm
+  Card, Icon, Image, Reveal, Button, Confirm, TransitionablePortal
 } from 'semantic-ui-react';
 import { deleteProject } from '../helpers/data/projectsData';
 
@@ -55,7 +55,8 @@ const ProjectCard = ({ user, setProjects, ...projectObject }) => {
       <Card.Content extra>
         <Button onClick={viewProject}>View</Button>
         <Button negative onClick={() => handleClick('open')}>Delete</Button>
-        <Confirm size='small' className='delete-modal'
+        <TransitionablePortal open={open}>
+        <Confirm className='delete-modal'
           open={open}
           content={`Would you like to delete ${projectObject.title}?`}
           onCancel={() => handleClick('open')}
@@ -64,6 +65,7 @@ const ProjectCard = ({ user, setProjects, ...projectObject }) => {
             handleClick('open');
           }}
         />
+        </TransitionablePortal>
       </Card.Content>
       <Card.Content extra>
         <a>
