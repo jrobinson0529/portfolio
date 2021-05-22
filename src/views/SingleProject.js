@@ -1,13 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { useHistory, useParams } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { AnimateGroup } from 'react-animation';
 import {
-  Container, Divider, Header, Button, Icon, Label
+  Container, Divider, Header, Button, Icon, Label,
 } from 'semantic-ui-react';
 import Footer from '../components/Footer';
 import { getSingleProject } from '../helpers/data/projectsData';
+import ProjectForm from '../components/ProjectForm';
 
-function SingleProject() {
+function SingleProject({ user }) {
   const [project, setProject] = useState({});
+  const [editing, setEditing] = useState(false);
+  const [footerMargin, setFooterMargin] = useState('-25em');
   const [demo, setDemo] = useState(false);
   const { id } = useParams();
   useEffect(() => {
@@ -17,6 +22,16 @@ function SingleProject() {
   const viewProjects = () => {
     history.push('/projects');
   };
+
+  const toggleForm = () => {
+    setEditing((prevState) => !prevState);
+    if (editing) {
+      setFooterMargin('-25em');
+    } else {
+      setFooterMargin('-45em');
+    }
+  };
+
   const toggleLiveDemo = () => {
     setDemo((prevState) => !prevState);
   };
@@ -48,7 +63,7 @@ function SingleProject() {
               backgroundSize: 'contain',
             }}
           ></Container>
-          <Container textAlign="justified" className="my-5">
+          <Container textAlign="justified" className="single-project-content-container">
             <Header as="h1" inverted id="single-project-header" size="huge">
               {project.title}
             </Header>
@@ -76,11 +91,26 @@ function SingleProject() {
               </Button>
             </Button.Group>
             <Button
-              className="back-to-projects-btn mx-3"
+              className="back-to-projects-btn"
               onClick={viewProjects}
+              style={{
+                margin: '0 10px'
+              }}
             >
               <Icon name="backward" /> Back to projects
             </Button>
+            {
+             user?.admin && <Button
+              className="edit-project-btn"
+              onClick={toggleForm}
+              color='green'
+              style={{
+                margin: '0 10px'
+              }}
+            >
+              <Icon name="edit" size='large' fitted/>
+            </Button>
+            }
           </Container>
           <Container textAlign="justified" className="my-5">
             {project.techIcons?.map((icon, i) => (
@@ -94,9 +124,21 @@ function SingleProject() {
           </Container>
         </div>
       )}
-      <Footer bottom='-25em'/>
+      <AnimateGroup animationIn='fadeInUp' duration={1000}>
+         {
+           editing && <ProjectForm
+            formTitle='Edit Project'
+            {...project}
+            setSingleProject={setProject}
+           />
+         }
+      </AnimateGroup>
+      <Footer bottom={footerMargin}/>
     </div>
   );
 }
+SingleProject.propTypes = {
+  user: PropTypes.any,
+};
 
 export default SingleProject;

@@ -14,7 +14,7 @@ function Routes({ user }) {
       <Switch>
         <Route exact path="/" component={() => <Home user={user}/>} />
         <Route exact path="/projects" component={() => <Projects user={user} />} />
-        <Route path="/projects/:id" component={() => <SingleProject />} />
+        <Route path="/projects/:id" component={() => <SingleProject user={user}/>} />
         <Route exact path="/tech" component={() => <Tech />} />
         <PrivateRoute exact path='/create-project' component={() => <CreateProject user={user}/>} user={user}/>
       </Switch>

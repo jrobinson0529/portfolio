@@ -12,7 +12,7 @@ const NavBar = ({ user }) => {
     setActiveItem(target.innerHTML);
   };
   return (
-    <div>
+    <div className='nav-bar'>
       <Segment inverted>
         <Menu inverted pointing secondary>
           <Menu.Item as={Link} to='/'

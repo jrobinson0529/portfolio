@@ -4,20 +4,20 @@ import {
   Button, Form, Input, Segment
 } from 'semantic-ui-react';
 import { StyledHeader } from './styledComponents/StyledHeader';
-import { createProject } from '../helpers/data/projectsData';
+import { createProject, editProject } from '../helpers/data/projectsData';
 
-function ProjectForm({ formTitle }) {
+function ProjectForm({ formTitle, setSingleProject, ...args }) {
   const [project, setProject] = useState({
     available: true,
-    description: '',
-    githubUrl: '',
-    id: null,
-    imageUrl: '',
-    likes: 0,
-    siteUrl: '',
-    techIcons: [],
-    title: '',
-    videoUrl: ''
+    description: args?.description || '',
+    githubUrl: args?.githubUrl || '',
+    id: args?.id || null,
+    imageUrl: args?.imageUrl || '',
+    likes: args?.likes || 0,
+    siteUrl: args?.siteUrl || '',
+    techIcons: args.techIcons || [],
+    title: args.title || '',
+    videoUrl: args.videoUrl || ''
   });
   const [errorMessage, setErrorMessage] = useState({
     titleError: false,
@@ -31,8 +31,8 @@ function ProjectForm({ formTitle }) {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (project.id) {
-      console.warn('you want to edit');
+    if (args.id) {
+      editProject(project, args.id).then(setSingleProject);
     } else if (project.title === '') {
       setErrorMessage({ titleError: true });
     } else {
@@ -115,7 +115,8 @@ function ProjectForm({ formTitle }) {
   );
 }
 ProjectForm.propTypes = {
-  formTitle: PropTypes.string
+  formTitle: PropTypes.string,
+  setSingleProject: PropTypes.func
 };
 
 export default ProjectForm;

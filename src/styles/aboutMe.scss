@@ -1,5 +1,8 @@
 @import 'variables';
 
+.home-container {
+  padding-top: 100px !important;
+}
 .about-me-card {
   width: 15rem !important;
 }
@@ -11,8 +14,8 @@
   width: 70%;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin: 100px auto !important;
-  padding: 10px;
+  margin: auto auto !important;
+  padding: 20px !important;
 }
 .about-me-info-container {
   height: 50%;
