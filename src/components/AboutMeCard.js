@@ -35,7 +35,6 @@ const AboutMeCard = () => {
   };
   return (
   <Segment className='about-me-container' inverted style={{
-    marginTop: '50px',
     transition: 'all .3s ease',
     borderTopLeftRadius: '200px',
     borderTopRightRadius: '200px',

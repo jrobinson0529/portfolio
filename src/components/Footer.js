@@ -14,7 +14,8 @@ function Footer({ bottom }) {
     <div className="Footer" id='Footer' style={{
       position: 'absolute',
       bottom,
-      width: '100%'
+      width: '100%',
+      transitionDuration: '500ms'
     }}>
       <Segment inverted vertical style={{ padding: '5em 0em' }}>
         <Container>
