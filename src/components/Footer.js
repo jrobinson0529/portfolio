@@ -14,7 +14,8 @@ function Footer({ bottom }) {
     <div className="Footer" id='Footer' style={{
       position: 'absolute',
       bottom,
-      width: '100%'
+      width: '100%',
+      transitionDuration: '500ms'
     }}>
       <Segment inverted vertical style={{ padding: '5em 0em' }}>
         <Container>
@@ -25,7 +26,7 @@ function Footer({ bottom }) {
                   link
                   inverted
                   horizontal
-                  className="d-flex justify-content-between"
+                  className="footer-icon-container"
                 >
                   <List.Item
                     as="a"
@@ -65,7 +66,7 @@ function Footer({ bottom }) {
           </Grid>
         </Container>
         <Container>
-          <Header inverted className="text-muted my-5">
+          <Header inverted className="footer-header">
             &copy; 2021 Jesse Robinson
           </Header>
         </Container>

@@ -19,4 +19,8 @@
 }
 .tech-container {
   width: 40%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 50px auto !important;
 }

@@ -11,7 +11,7 @@ const StyledHeader = styled(Header)`
 `;
 const AboutMeHeader = styled(StyledHeader)`
   &&& {
-    margin: 5px;
+    margin: 20px;
   }
 `;
 export { AboutMeHeader, StyledHeader };

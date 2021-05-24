@@ -19,6 +19,17 @@ const createProject = (projectObject) => new Promise((resolve, reject) => {
       axios.patch(`${dbUrl}/projects/${response.data.name}.json`, body);
     }).catch((error) => reject(error));
 });
+const deleteProject = (id) => new Promise((resolve, reject) => {
+  axios.delete(`${dbUrl}/projects/${id}.json`)
+    .then(() => getProjects().then(resolve))
+    .catch((error) => reject(error));
+});
+const editProject = (project, projectId) => new Promise((resolve, reject) => {
+  axios.patch(`${dbUrl}/projects/${projectId}.json`, project)
+    .then(() => getSingleProject(projectId).then(resolve))
+    .catch((error) => reject(error));
+});
+
 export {
-  getSingleProject, getProjects, createProject
+  getSingleProject, getProjects, createProject, deleteProject, editProject
 };

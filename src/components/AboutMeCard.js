@@ -34,15 +34,14 @@ const AboutMeCard = () => {
     setLearnMore((prevState) => !prevState);
   };
   return (
-  <Segment className='about-me-container d-flex w-75 justify-content-between mx-auto p-5 flex-wrap' inverted style={{
-    marginTop: '50px',
+  <Segment className='about-me-container' inverted style={{
     transition: 'all .3s ease',
     borderTopLeftRadius: '200px',
     borderTopRightRadius: '200px',
     borderRadius: '200px',
     animation: animations.fadeInUp,
   }}>
-  <Segment className='h-50' style={{
+  <Segment className='about-me-info-container' style={{
     backgroundColor: 'transparent',
     color: 'rgb(255, 255, 255, .8)',
     border: 'none',

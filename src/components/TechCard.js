@@ -32,7 +32,7 @@ function TechCard({ ...args }) {
     return () => timeout.map((timeoutClear) => clearTimeout(timeoutClear));
   }, []);
   return (
-    <AnimateGroup animation="pop" className='d-flex flex-wrap justify-content-center mx-auto tech-container'>
+    <AnimateGroup animation="pop" className='tech-container'>
      { args.displayJS && <Icon className='tech-icons' name='js square' size='huge'/> }
      { args.displayHtml && <Icon className='tech-icons' name='html5' size='huge'/> }
      { args.displaySass && <Icon className='tech-icons' name='sass' size='huge'/> }
